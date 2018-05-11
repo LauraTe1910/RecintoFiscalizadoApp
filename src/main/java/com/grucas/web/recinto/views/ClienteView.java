@@ -34,7 +34,6 @@ import java.util.List;
  * @author GrucasDev
  */
 public class ClienteView extends Panel implements View {
-
     Usuario usuario = (Usuario) VaadinSession.getCurrent().getSession().getAttribute("USUARIO_ACTIVO");
 
     public static final String NAME = "CLIENTE";
