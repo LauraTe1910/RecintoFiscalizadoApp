@@ -142,7 +142,7 @@ public class ClienteWindow extends Window {
                 cliente.setEmpresa("Grucas");
                 cliente.setEmpresa_id(0);
                 cliente.setActivo(true);
-
+                
                 if (isEdit) {
                     service.ClienteUpdate(cliente);
                 } else {

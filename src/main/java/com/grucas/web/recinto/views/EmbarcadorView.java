@@ -76,6 +76,8 @@ public class EmbarcadorView extends Panel implements View {
     }
 
     public void initComponents() {
+        setSizeFull();
+        
         gridEmbarcador.setItems(getEmbarcado());
         gridEmbarcador.addColumn(Embarcador::getNombre).setCaption("NOMBRE").setId("NOMBRE");
         gridEmbarcador.addColumn(Embarcador::getTipo).setCaption("TIPO").setId("TIPO");
@@ -131,7 +133,7 @@ public class EmbarcadorView extends Panel implements View {
             } else {
                 MessageBox.createError()
                         .withCaption("Error!")
-                        .withMessage("Debe tener un Inventario seleccionado para poder modificarlo.")
+                        .withMessage("Debe tener un Embarcador seleccionado para poder modificarlo.")
                         .withRetryButton()
                         .open();
             }

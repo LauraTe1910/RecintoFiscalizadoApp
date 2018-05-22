@@ -72,6 +72,7 @@ public class ClienteView extends Panel implements View {
     }
 
     public void initComponents() {
+        setSizeFull();
 
         SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -95,8 +96,8 @@ public class ClienteView extends Panel implements View {
         gridCliente.addColumn(Cliente::getCorreo).setCaption("CORREO").setId("CORREO");
 
         Column<Cliente, String> rFactura = gridCliente.addColumn(det -> ((det.getRecepcion_factura() != null) ? dt.format(det.getRecepcion_factura()) : ""));
-        rFactura.setCaption("RECEPCION FACTURAA");
-        rFactura.setId("RECEPCION FACTURAA");
+        rFactura.setCaption("RECEPCION FACTURA");
+        rFactura.setId("RECEPCION FACTURA");
 
         gridCliente.addItemClickListener((evt) -> {
             if (evt.getMouseEventDetails().isDoubleClick()) {
@@ -146,7 +147,7 @@ public class ClienteView extends Panel implements View {
             } else {
                 MessageBox.createError()
                         .withCaption("Error!")
-                        .withMessage("Debe tener un Inventario seleccionado para poder modificarlo.")
+                        .withMessage("Debe tener un Cliente seleccionado para poder modificarlo.")
                         .withRetryButton()
                         .open();
             }

@@ -72,6 +72,7 @@ public class ProductoView extends Panel implements View {
     }
 
     public void initComponents() {
+        setSizeFull();
 
         gridProducto.setItems(getProductos());
         gridProducto.setHeight("350px");
@@ -132,7 +133,7 @@ public class ProductoView extends Panel implements View {
             } else {
                 MessageBox.createError()
                         .withCaption("Error!")
-                        .withMessage("Debe tener un Inventario seleccionado para poder modificarlo.")
+                        .withMessage("Debe tener un Producto seleccionado para poder modificarlo.")
                         .withRetryButton()
                         .open();
             }

@@ -15,6 +15,7 @@ import com.grucas.web.recinto.views.ClienteView;
 import com.grucas.web.recinto.views.EmbarcadorView;
 import com.grucas.web.recinto.views.MainView;
 import com.grucas.web.recinto.views.ProductoView;
+import com.grucas.web.recinto.views.SolicitudDeServicioView;
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window 
@@ -44,6 +45,7 @@ public class MyUI extends UI {
        navigator.addView(ClienteView.NAME, ClienteView.class);
        navigator.addView(EmbarcadorView.NAME, EmbarcadorView.class); 
        navigator.addView(ProductoView.NAME, ProductoView.class);
+       navigator.addView(SolicitudDeServicioView.NAME, SolicitudDeServicioView.class);
        
        navigator.navigateTo(MainView.NAME);
        
