@@ -83,6 +83,11 @@
             <version>4.0.21</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>com.grucas</groupId>
+            <artifactId>GrucasDomain</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

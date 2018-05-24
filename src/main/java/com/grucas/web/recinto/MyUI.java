@@ -13,6 +13,7 @@ import com.vaadin.ui.UI;
 import java.util.Locale;
 import com.grucas.web.recinto.views.ClienteView;
 import com.grucas.web.recinto.views.EmbarcadorView;
+import com.grucas.web.recinto.views.LoginView;
 import com.grucas.web.recinto.views.MainView;
 import com.grucas.web.recinto.views.ProductoView;
 import com.grucas.web.recinto.views.SolicitudDeServicioView;
@@ -33,23 +34,20 @@ public class MyUI extends UI {
     protected void init(VaadinRequest vaadinRequest) {
         setLocale(Locale.US);
         
-        
-        
-        
         Responsive.makeResponsive(this);
         setContent(ccsLayout);
         ccsLayout.setSizeFull();
 
        navigator = new Navigator(this, ccsLayout);
+       navigator.addView(LoginView.NAME, LoginView.class);
        navigator.addView(MainView.NAME, MainView.class);
        navigator.addView(ClienteView.NAME, ClienteView.class);
        navigator.addView(EmbarcadorView.NAME, EmbarcadorView.class); 
        navigator.addView(ProductoView.NAME, ProductoView.class);
        navigator.addView(SolicitudDeServicioView.NAME, SolicitudDeServicioView.class);
        
-       navigator.navigateTo(MainView.NAME);
+       navigator.navigateTo(LoginView.NAME);
        
-
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)

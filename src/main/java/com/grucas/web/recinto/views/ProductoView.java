@@ -22,7 +22,6 @@ import com.rubik.model.Usuario;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.Grid.SelectionMode;
-import com.vaadin.ui.Window;
 import de.steinwedel.messagebox.MessageBox;
 import java.util.ArrayList;
 import java.util.List;
@@ -90,30 +89,21 @@ public class ProductoView extends Panel implements View {
                 ProductoWindow windows = new ProductoWindow(evt.getItem());
                 windows.center();
                 windows.setModal(true);
-                windows.addCloseListener(new Window.CloseListener() {
-                    @Override
-                    public void windowClose(Window.CloseEvent e) {
-                        gridProducto.setItems(getProductos());
-                    }
+                windows.addCloseListener( e-> {
+                    gridProducto.setItems(getProductos());
                 });
                 getUI().addWindow(windows);
             }
         });
 
-        btnAdd.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(Button.ClickEvent event) {
-                ProductoWindow windows = new ProductoWindow();
-                windows.center();
-                windows.setModal(true);
-                windows.addCloseListener(new Window.CloseListener() {
-                    @Override
-                    public void windowClose(Window.CloseEvent e) {
-                        gridProducto.setItems(getProductos());
-                    }
-                });
-                getUI().addWindow(windows);
-            }
+        btnAdd.addClickListener(e -> {
+            ProductoWindow windows = new ProductoWindow();
+            windows.center();
+            windows.setModal(true);
+            windows.addCloseListener(ev -> {
+                gridProducto.setItems(getProductos());
+            });
+            getUI().addWindow(windows);
         });
 
         btnModify.addClickListener(event -> {
@@ -122,11 +112,8 @@ public class ProductoView extends Panel implements View {
                 ProductoWindow windows = new ProductoWindow(gridProducto.getSelectedItems().iterator().next());
                 windows.center();
                 windows.setModal(true);
-                windows.addCloseListener(new Window.CloseListener() {
-                    @Override
-                    public void windowClose(Window.CloseEvent e) {
-                        gridProducto.setItems(getProductos());
-                    }
+                windows.addCloseListener(e -> {
+                    gridProducto.setItems(getProductos());
                 });
                 getUI().addWindow(windows);
 
@@ -147,7 +134,7 @@ public class ProductoView extends Panel implements View {
 
     public List getProductos() {
         ProductoService service = new ProductoService();
-        service.getProducto("", "", "");
+        service.getProducto("", "", "id");
         listProducto = service.getObjects();
 
         if (!service.getOk()) {

@@ -105,7 +105,7 @@ public class SolicitudDeServicioView extends Panel implements View {
         form.addComponents(txtCliente, fechaInicial);
         form1.addComponents(cboTipo, fechaFinal);
           
-        gridservicio.setWidth("50%");
+        gridservicio.setWidth("90%");
         gridservicio.setHeight("350px");
         gridservicio.setSelectionMode(Grid.SelectionMode.SINGLE);
 

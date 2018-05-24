@@ -7,28 +7,26 @@ package com.grucas.web.recinto.views;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
-import com.vaadin.ui.CssLayout;
-import com.vaadin.ui.HorizontalLayout;
 import com.grucas.web.recinto.fragments.FragmentTop;
+import com.vaadin.ui.VerticalLayout;
 
 /**
  *
  * @author GrucasDev
  */
-public class MainView extends HorizontalLayout implements View {
+@SuppressWarnings("serial")
+public class MainView extends VerticalLayout implements View {
     
     public static final String NAME = "INICIO";
-    CssLayout ccsLayout = new CssLayout();
+
+    public MainView() {
+    }
     
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
-       addComponent(new FragmentTop());
-       
-       
-        
-        
+        setSizeFull();
+        setMargin(false);
+        addComponent(new FragmentTop());
     }
-    
-    
     
 }
