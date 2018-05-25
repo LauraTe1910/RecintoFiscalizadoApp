@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="612" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7602796b-5a1c-4202-832d-07ed81b0e798">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="249"/>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM solicitud_de_servicio
+WHERE id = $P{id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_elaboracion" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_modificacion" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="empresa_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="empresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unidad_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="usuario_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_doc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="folio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="serie" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo_documento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo_archivo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="razon_cancelar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cliente_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cliente_rfc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="metodo_pago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="importe" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descuento" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subtotal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="iva" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="porc_iva" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="importe_letra" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="activo" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="importador_exportador_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="importador_exportador" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="importador_exportador_rfc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="consignatario_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="consignatario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="consignatario_rfc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="regimen" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="naviera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="buque_viaje" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="origen" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="destino" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="booking" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paletizado" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sobredimenzionado" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_paletiza" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="peligroso" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_cita" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_eta" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_solicitud_servicio" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="imo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="undg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transportista" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="placas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="operador" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="caja" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="facturado" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="335" splitType="Stretch">
+			<rectangle>
+				<reportElement x="165" y="1" width="407" height="31" uuid="6f8d1190-2a0d-4e2c-ad94-a776cfdb2c7e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="176" y="2" width="393" height="30" uuid="03452448-c623-4f16-82ae-09e0936afecd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOLICITUD DE SERVICIO PARA MANIOBRAS GENERALES
+SG-ALM-FR-403]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="32" width="271" height="20" uuid="d7f5defa-1a65-4d7c-a0f9-fe0fef0e2235"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[RECINTO FISCALIZADO GRUPO CASTAÑEDA CR 203]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="52" width="143" height="12" uuid="7beb8dbc-07a4-47e8-8317-57cd8fb76a05"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Campos para ser llenados por Recinto Castañeda]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="392" y="63" width="109" height="31" uuid="ef323156-92bc-4d23-a977-f3c9ba4f2e7d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="392" y="64" width="109" height="30" uuid="2f1fd564-d833-4272-a8bc-86e9f876d607"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOLIO PARA PREVIO O
+NUMERO DE  VISITA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="80" width="236" height="20" uuid="82370f81-07f2-41ce-a8a2-87a7c0fde812"/>
+				<text><![CDATA[Favor de llenar todos los campos marcados con * ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="125" width="84" height="12" uuid="d9e7671c-0b60-484d-9a6c-fa0e778c1366"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[* AGENCIA ADUANAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="136" width="180" height="13" uuid="d447142e-d13f-4cdc-8a1f-d4260565bccb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*NOMBRE DE QUIEN SOLICITA EL SERVICIO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="1" width="165" height="31" uuid="fce5eb42-3026-4617-a446-0d2cce13ee2d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="392" y="94" width="169" height="13" uuid="38b149c5-83aa-473d-89c7-fa412137a606"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="392" y="94" width="102" height="13" uuid="c2a5e520-109a-4343-ba9b-1bcecb485446"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA Y HORA DE LA CITA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="148" width="123" height="12" uuid="2605026f-7e3c-4def-bea8-f334a69697ab"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*IMPORTADOR/EXPORTADOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="159" width="84" height="12" uuid="307ebda4-2694-4529-903e-33aed095aa94"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*CONSIGNATARIO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="126" width="33" height="11" uuid="440a86d7-1fe3-48d2-8f0d-677e4168b113"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*TEL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="149" width="33" height="12" uuid="73948eab-b9f0-4833-8011-664aa47fb71b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*RFC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="161" width="33" height="11" uuid="4f5f90a9-f027-4378-bc64-f83f5364d728"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*RFC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="173" width="67" height="11" uuid="2645b17c-2b17-49eb-abe7-72ffc79e955b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*FACTURAR A:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="173" width="84" height="11" uuid="01203b0f-0bc8-4c12-ade1-426d45813862"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[AGENCIA ADUANAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="173" width="119" height="11" uuid="3285e621-e5d6-454b-b1ae-5d2bbd563713"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[IMPORTADOR/EXPORTADOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="173" width="76" height="11" uuid="734447ca-9907-46ba-a6f4-b01939c74b23"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CONSIGNATARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="173" width="28" height="11" uuid="e40692c7-1c4e-4803-b4e9-62851b7fa322"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OTRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="184" width="327" height="14" uuid="fc3ad5b3-3c7a-41c2-94c4-e3fbf5e06d0c"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*LLENE LOS DATOS CORRESPONDIENTES DE QUIEN VA A FACTURAR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="197" width="67" height="11" uuid="052a1be6-0c25-4831-bcb2-93884403616a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*RAZON SOCIAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="207" width="48" height="11" uuid="f8b7e8bc-0025-4cd0-bbec-584e1747e337"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*DOMICILIO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="218" width="48" height="11" uuid="1e6c2dc4-bc9c-414c-8a85-7a6f6d637b44"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*CIUDAD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="229" width="240" height="12" uuid="64a3db6a-9d53-4dd2-b7a4-3d9c8af54668"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*NOMBRE DE LA PERSONA QUE DEBE RECIBIR LA FACTURA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="252" width="262" height="13" uuid="63c05a8c-27bc-4730-8220-9b6f53141cf3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[INDIQUE SI REQUIERE ALGUN DATO ADICIONAL EN LA FACTURA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="197" width="25" height="11" uuid="ce77a172-f868-49c3-919c-b4aaa5fddbb5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*RFC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="207" width="19" height="11" uuid="b4f7dc1c-6522-4e2e-b341-70df6e64b15c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*CP:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="218" width="44" height="11" uuid="77f5e1cf-f24b-40b4-8a57-ec763dcb70d2"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*ESTADO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="218" width="24" height="11" uuid="8a4a7c59-0b91-4bd7-a07a-cca687363350"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*TEL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="229" width="108" height="12" uuid="8a1127d7-f43d-45fa-9e7e-69e87da0b8dc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*CORREO ELECTRONICO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="241" width="224" height="11" uuid="1388866c-c4ec-49ff-a049-79d17f74f163"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*NUMERO DE REFERENCIA PARA INCLUIR EN FACTURA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="264" width="49" height="11" uuid="2211aa37-321d-43ac-b9e8-6ece7c0ad986"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*REGIMEN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="264" width="57" height="11" uuid="e159077a-3366-414e-ad72-b529c8743e45"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[IMPORTACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="264" width="60" height="11" uuid="6c94cab4-7400-4a80-80c1-c7e5e9faf5d9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[EXPORTACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="264" width="67" height="11" uuid="624608fd-80db-4936-9713-22c1aeb32922"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DESISTIMIENTO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="51" y="277" width="65" height="15" backcolor="#CCCCCC" uuid="bb18ecd3-b976-4f90-b701-473235d2dedd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="116" y="277" width="83" height="15" backcolor="#CCCCCC" uuid="f8d535f6-9112-4659-a30c-759d3033f347"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="199" y="277" width="104" height="15" backcolor="#CCCCCC" uuid="85456337-a333-4ad8-8b64-09d5a097e401"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="445" y="277" width="62" height="15" backcolor="#CCCCCC" uuid="46c83a83-e468-49ec-bd21-c40d391d8acc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="303" y="277" width="142" height="15" backcolor="#CCCCCC" uuid="a0e5852c-13e0-4e2a-a1bd-f363c8fa072e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="56" y="279" width="66" height="11" uuid="4415fbf7-80f2-408a-a442-2331503da935"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[LINEA NAVIERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="279" width="76" height="11" uuid="a5545e17-a838-41b6-b388-fbe6397b3593"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BUQUE / VIAJE No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="279" width="100" height="12" backcolor="#CCCCCC" uuid="2f1f717e-d9f0-4b4d-9372-b7020c937351"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[FECHA DE ARRIBO O ETA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="307" y="278" width="138" height="15" backcolor="#FFFFFF" uuid="ea5dda80-7e03-4b44-b88b-7b7676dddcb5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PUERTO DE ORIGEN O DESTINO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="278" width="58" height="12" uuid="b07896e2-7dc3-45a3-8615-dc61002fa9ab"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BOOKING / BL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="292" width="65" height="20" uuid="574287c7-051c-4e11-887f-0c23ba731ee2"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{naviera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="292" width="83" height="20" uuid="82be186c-d64c-48d9-b307-de2d1ece7d72"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{buque_viaje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="292" width="104" height="20" uuid="010b2b85-2cd1-490f-896d-b9c49dc37350"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fecha_eta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="292" width="65" height="20" uuid="3dac36ea-ceff-45d0-a92a-83d638993ecf"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{origen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="292" width="77" height="20" uuid="8a29fd0c-4423-43da-9d4e-75a093887d00"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="292" width="62" height="20" uuid="968f9df3-c0aa-4dcb-ab30-5b78c6def3d6"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{booking}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="116" y="314" width="329" height="15" uuid="e40e84d9-df74-428d-9923-96e21a46c817"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*DESCRIPCION DE MANIOBRAS Y SERVICIOS SOLICITADOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="100" width="115" height="12" uuid="10420294-9d23-4789-923f-d4bdefedc85f"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS GENERALES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="494" y="95" width="62" height="12" uuid="b6fe2356-fd87-4e14-9c64-dfd6bf355555"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_cita}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="501" y="63" width="60" height="31" uuid="decdc627-b5c0-40f9-984b-5defff59daa8"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="22" y="312" width="6" height="0" uuid="a9ba215f-28a2-4e37-9e32-2b884db6cdbe"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="102" y="266" width="5" height="7" uuid="5e8b3882-b1b8-49b2-8c1d-c9de3f28fafa"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="238" y="267" width="5" height="7" uuid="efd487d9-91e2-452c-bd9d-b297f0d5e5f5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="369" y="266" width="5" height="7" uuid="52912271-1efe-47cf-8497-21e17ee60410"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="98" y="175" width="5" height="7" uuid="cc8558a0-2f19-44cc-89c8-bf7f6ba9d867"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="212" y="175" width="5" height="7" uuid="12f8081d-b8cc-4eaa-8bc7-5f49a6c75a0b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="363" y="175" width="5" height="7" uuid="bde803a6-ac50-49a8-8c01-3143124ae5e1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="471" y="175" width="5" height="7" uuid="3142c0fc-4e67-4655-ba07-1bb9dfb1db55"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="11" width="115" height="11" uuid="25a3c041-a5f4-4565-a2a1-0ee100804bc3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[RECEPCION DE MERCANCIA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="23" width="128" height="13" uuid="986f69ea-049f-4fdf-9e41-dda9774193c5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[RECEPCION DE CONTENEDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="36" width="86" height="13" uuid="90c71c35-6fc4-4bd9-9a10-232c5a64db51"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DESCONSOLIDACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="49" width="69" height="13" uuid="e9707841-ca89-4bbc-bfcb-6515c9250e56"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PREVIO OCULAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="62" width="61" height="11" uuid="77e9e35e-ae2c-4381-b17d-b435f8ea31f0"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PREVIO FISICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="73" width="76" height="11" uuid="b03ca683-72ee-45be-9ba0-398d66ace7b3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OTROS SERVICIOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="11" width="111" height="12" uuid="436ebcce-af7e-4c34-bab3-ac795fb2548e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ENTREGA DE MERCANCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="23" width="121" height="13" uuid="16092077-c357-4b1d-a5e0-0647bc31cdc5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ENTREGA DE CONTENEDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="36" width="74" height="13" uuid="e967c92f-0b22-4c33-a5c7-afd5623af9dd"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CONSOLIDACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="49" width="133" height="13" uuid="669f7a18-0cc4-424e-b721-64529fd5ff0d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[RECONOCIMIENTO ADUANERO]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement x="191" y="0" width="166" height="12" uuid="b8d938fc-f6e7-4fff-8d5a-02c2435bc10e"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*INFORMACION DE LA MERCANCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="17" width="55" height="11" uuid="38580c1e-c6d5-4edd-85cd-a5852e29b435"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PALETIZADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="16" width="55" height="12" uuid="fca1e435-7891-4d53-9641-1ce8abdda283"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NO PALETIZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="29" width="129" height="11" uuid="ee5262d1-1e37-4d53-b0b5-58abccd3e19a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CARGA SOBREDIMENSIONADA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="29" width="100" height="13" uuid="702347f1-35d0-4965-8ab3-890db0103d43"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CARGA PELIGROSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="31" width="25" height="11" uuid="f39a8aeb-40d9-4d94-911e-3525e4e24ffb"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[UNDG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="31" width="20" height="11" uuid="b853c874-6946-4bfe-a1fc-f4f95ae146b9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[IMO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="41" width="158" height="12" uuid="00250a5b-52a5-4e57-b6df-179156c56bc1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[REQUIERE ALGUN MANEJO ESPECIAL:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="33" y="17" width="13" height="11" uuid="ca6c6106-47e6-4687-82d8-9c7c498124ee"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="33" y="31" width="13" height="11" uuid="9394ddb5-6568-4c4e-b62b-e06bb8588dc5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="257" y="16" width="13" height="11" uuid="42717491-00ec-4b6d-8528-92d9bf360a3b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="239" y="31" width="13" height="11" uuid="01074cf1-5949-4fae-b17a-898566fc3715"/>
+			</rectangle>
+			<textField>
+				<reportElement x="390" y="31" width="56" height="11" uuid="82244803-732c-4372-8884-24908b3b8de0"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{imo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="31" width="61" height="11" uuid="43844706-3f1d-40dc-a633-b097e8759543"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{undg}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="194" splitType="Stretch">
+			<staticText>
+				<reportElement x="219" y="0" width="117" height="12" uuid="beb271f1-c1ac-44f7-997c-fc424ddd7514"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*DATOS DE TRANSPORTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="12" width="90" height="12" uuid="6c987da0-a1b6-4df9-bf81-3f89aceac53e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CIA. TRANSPORTISTA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="24" width="34" height="11" uuid="2af0e404-80e0-4d42-a9d7-13e56d5142a5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PLACAS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="13" width="49" height="11" uuid="d7d30fd2-0abb-4c02-ba55-839c58374c7d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OPERADOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="24" width="77" height="13" uuid="7392ab09-fa8d-4f0e-b5ad-00cae204825d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NUMERO DE CAJA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="37" width="311" height="13" uuid="b5f1befd-7452-463b-8b4b-23710500ce94"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA Y HORA EN QUE SE SURGUIERE ASIGNAR LA SOLICITUD DE SERVICIO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="55" width="544" height="46" uuid="3a33d639-6879-4778-a909-7935fa9492c7"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[La solicitud de servicio debera presentarse en esta Terminal por lo menos el dia anterior al que se desea el servicio antes de las 17:00 horas de Lunes  Vierenes y antes de las 12 horas del Sábado.Para la entrega/recepcion de contenedores en las Terminales portuarias en Altamira, los pases de dichas Terminales son indispensables. Si estos se presentan en GRUCAS después de las 15:00 horas de Lunes a Viernes o los Sábados después de las 10:00 horas, ésto podria resultar en un dia de retraso en el servicio. Información errónea proporcionada en la presente solicitud que resulte en gastos extraordinarios podría ocasionar algún cargo adicional para el cliente. Grucas no asume responsabilidades alguna por demorras etc. A menos que así se establezca en el contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="101" width="544" height="27" uuid="cc470c05-3e7a-43f9-9df8-75b3f512cc2a"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[La modificación de Información una vez confirmado el servicio genera un cargo de 250 MXN más IVA. Las unidades deberán presentarse 15 mins. Antes del horario de la cita asignada. En caso de requrir cancelar el serviciio, esto debe ser notificado por lo menos 4 horas antes de la cita, si el servicio no se cancela y/o la unidad no se presenta; se generará un cargo por maniobra  en falso.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="128" width="544" height="20" uuid="7fbc3d9a-6cb4-4d81-96a4-21d0d9015843"/>
+				<textElement textAlignment="Justified">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Esta solicitud debera presentarse para operaciones de Importación: con pedimento(completo NO simplificado), BL, Carta de Entrega, Tarjeta de desconsolidación (para carga LCL). Para Exportación: Lista de Empaque y Confirmación de Booking.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="407" y="23" width="100" height="13" uuid="89611ca0-150c-434f-8f4c-564590eff3e3"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{caja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="12" width="100" height="12" uuid="b1f47ddf-6c33-4b9b-9117-d755b301890c"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{operador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="12" width="100" height="12" uuid="74a44031-313a-46c0-8f90-2a163b5ab654"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{transportista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="23" width="100" height="11" uuid="b7d87ce6-aa40-4416-9021-23b4f8ba7aa5"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="36" width="100" height="13" uuid="3f15555a-1af5-46f9-89d1-11facee59aba"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_solicitud_servicio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="43" y="175" width="100" height="12" uuid="a72b4014-9357-4174-acf7-9abf736a8e01"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(RECINTO FISCALIZADO)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="174" width="121" height="13" uuid="8bbe1455-4682-4a35-bbf9-45b30119bb33"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(CLIENTE / REPRESENTANTE)]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -134,13 +134,13 @@ public class ClienteWindow extends Window {
                 ClienteService service = new ClienteService();
 
 //                cliente.setNombre(cliente.getNombre().toUpperCase());
-                cliente.setTipo(cboTipo.getValue());
-                cliente.setUnidad_id(0);
-                cliente.setUnidad("Tampico");
-                cliente.setUsuario_id(0);
-                cliente.setUsuario("laura");
-                cliente.setEmpresa("Grucas");
-                cliente.setEmpresa_id(0);
+//                cliente.setTipo(cboTipo.getValue());
+                cliente.setUnidad_id(1);
+                cliente.setUnidad(cliente.getUnidad());
+                cliente.setUsuario_id(cliente.getId());
+                cliente.setUsuario(cliente.getUsuario());
+                cliente.setEmpresa(cliente.getEmpresa());
+                cliente.setEmpresa_id(1);
                 cliente.setActivo(true);
                 
                 if (isEdit) {

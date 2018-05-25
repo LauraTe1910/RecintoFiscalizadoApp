@@ -161,7 +161,7 @@ public class ClienteView extends Panel implements View {
 
     public List getCliente() {
         ClienteService service = new ClienteService();
-        service.getCliente("", "", "");
+        service.getCliente("", "", " id ");
         listCliente = service.getObjects();
 
         if (!service.getOk()) {
