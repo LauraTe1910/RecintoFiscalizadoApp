@@ -43,7 +43,7 @@ public class FragmentTop extends HorizontalLayout {
 
         HorizontalLayout rolePanel = new HorizontalLayout();
 
-        Label lblusuario = new Label(usuario.getNombre() + "   |   " + usuario.getRol()+ "  ");
+        Label lblusuario = new Label();  //usuario.getNombre() + "   |   " + usuario.getRol()+ "  "
         rolePanel.addComponents(profilePic, lblusuario);
         rolePanel.setComponentAlignment(lblusuario, Alignment.MIDDLE_CENTER);
 

@@ -5,6 +5,7 @@
  */
 package com.grucas.web.recinto.views;
 
+import com.grucas.domain.model.Usuario;
 import com.grucas.domain.services.UsuarioService;
 import com.grucas.web.recinto.ConfigApp;
 import com.grucas.web.recinto.windows.WindowRecoveryPass;
@@ -90,7 +91,7 @@ public class LoginView extends VerticalLayout implements View {
                 UsuarioService service = new UsuarioService();
                 service.login(txtUser.getValue(), txtPass.getValue(), ConfigApp.APLICATION_CODE);
                 if (service.getOk() && service.getObject() != null) {
-                    
+
                     MessageBox.createInfo()
                             .withCaption("Bienvenido!")
                             .withMessage(service.getNotification())
@@ -99,7 +100,7 @@ public class LoginView extends VerticalLayout implements View {
                     txtPass.setValue("");
                     txtUser.focus();
                     
-                    VaadinSession.getCurrent().getSession().setAttribute("USUARIO_ACTIVO", service.getObject());
+                    VaadinSession.getCurrent().getSession().setAttribute("USUARIO_ACTIVO", new Usuario()); //service.getObject()
 
                     getUI().getNavigator().navigateTo(MainView.NAME);
                     
