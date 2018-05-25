@@ -5,9 +5,9 @@
  */
 package com.grucas.web.recinto.windows;
 
+import com.grucas.domain.model.Usuario;
 import com.grucas.recinto.model.SolicitudDeServicio;
 import com.grucas.web.recinto.fragments.FragmentTop;
-import com.rubik.model.Usuario;
 import com.vaadin.data.HasValue.ValueChangeEvent;
 import com.vaadin.data.HasValue.ValueChangeListener;
 import com.vaadin.server.VaadinSession;

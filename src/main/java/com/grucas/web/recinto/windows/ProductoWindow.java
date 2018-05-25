@@ -5,9 +5,9 @@
  */
 package com.grucas.web.recinto.windows;
 
+import com.grucas.domain.model.Usuario;
 import com.grucas.recinto.domain.ProductoService;
 import com.grucas.recinto.model.Producto;
-import com.rubik.model.Usuario;
 import com.vaadin.data.Binder;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.Alignment;

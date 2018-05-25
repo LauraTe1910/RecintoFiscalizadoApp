@@ -5,10 +5,10 @@
  */
 package com.grucas.web.recinto.views;
 
+import com.grucas.domain.model.Usuario;
 import com.grucas.recinto.model.SolicitudDeServicio;
 import com.grucas.web.recinto.fragments.FragmentTop;
 import com.grucas.web.recinto.windows.SolicitudDeServicioWindow;
-import com.rubik.model.Usuario;
 import com.vaadin.navigator.View;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.Alignment;

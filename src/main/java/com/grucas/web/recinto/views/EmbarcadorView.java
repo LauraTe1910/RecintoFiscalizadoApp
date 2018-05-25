@@ -5,6 +5,7 @@
  */
 package com.grucas.web.recinto.views;
 
+import com.grucas.domain.model.Usuario;
 import com.grucas.recinto.domain.EmbarcadorService;
 import com.grucas.recinto.model.Embarcador;
 import com.vaadin.navigator.View;
@@ -17,7 +18,6 @@ import com.vaadin.ui.VerticalLayout;
 import org.rubicone.vaadin.fam3.silk.Fam3SilkIcon;
 import com.grucas.web.recinto.fragments.FragmentTop;
 import com.grucas.web.recinto.windows.EmbarcadorWindow;
-import com.rubik.model.Usuario;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.Alignment;
